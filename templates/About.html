@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../static/script.js"></script>
+    <title>About The Room</title>
+</head>
+<body>
+<h1>The Room Project</h1>
+<p id="about_statement">
+    <em>"Knowing yourself is the beginning of all wisdom" - Aristotle</em><br/><br/>
+    The Room project was created to prompt people to start thinking about what they like, feel, and
+    think about different subjects, questions and general opinion. Very rarely,
+    we take a pause in our busy days to  reflect on our life.
+    The Room is a game that allows you and your friends to learn,
+    debate, and discuss various of topics and ask tough questions.
+    Enjoy the Room!</p>
+<a href="{{ url_for('index') }}"><button id="main_cta">Go Back to Room</button></a>
+</body>
+</html>

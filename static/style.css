@@ -1,0 +1,111 @@
+*
+{
+    font-family: "Avenir Next", Verdana, sens-serif;
+
+}
+
+main {
+    width: 80%;
+    display: block;
+    float: left;
+    height: auto;
+}
+
+#about_statement {
+margin-top: -10px;
+font-size: 0.8em;
+}
+
+aside {
+    width: 20%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    float: left;
+/*    border: 1px solid black; */
+}
+
+#question {
+    display: none;
+}
+
+#main_cta {
+    position: absolute;
+    bottom: 10%;
+    padding: 15px 35px;
+    background: transparent;
+    border-radius: 25px;
+    border: 1px solid black;
+    font-weight: bolder;
+    font-size: 1.4em;
+    outline: none;
+}
+
+.additional_actions {
+    margin: 0 20px 20px 20px;
+    border-radius: 100%;
+    width: 120px;
+    height: 120px;
+    background: transparent 80%;
+    font-size: 1rem;
+    font-weight: bolder;
+    outline: none;
+    float: right;
+    clear: right;
+}
+
+aside ul {
+    margin-top: 80%;
+    list-style: none;
+
+}
+
+#buy_cards {
+
+}
+
+#answers {
+
+}
+
+body {
+    font-size: 3em;
+    padding: 0;
+}
+
+h1 {
+    width: 80%;
+}
+
+#fb_footer {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    background-color: white;
+
+}
+
+#fb_comment_section {
+    position: relative;
+    top: 30px;
+}
+
+footer {
+    background-color: white;
+}
+
+footer ul li
+{
+    display: inline;
+    text-align: center;
+    font-size: 0.3em;
+    list-style-type: none;
+    margin: 0 20px;
+
+}
+
+footer ul li a {
+    text-decoration: none;
+}
