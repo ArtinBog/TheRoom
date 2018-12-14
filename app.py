@@ -1,6 +1,6 @@
 from flask import Flask, render_template, url_for, request, jsonify, g, flash
 import random
-from . import GSintegration as gs
+from modules import GSintegration as gs
 
 app = Flask(__name__)
 # app.static_folder = 'static'
