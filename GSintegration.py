@@ -30,7 +30,6 @@ sheet = service.spreadsheets()
 
 result = sheet.values().get(spreadsheetId=data_source, range=data_range).execute()
 values = result.get('values', [])
-
 def q_n_bg(values):
     bg_color_palette = {'blue': [], 'white': [], 'orange': [], 'green': [], 'purple': [], 'black': [], 'red': [], 'darkred': []}
 
