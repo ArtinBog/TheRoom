@@ -1,2 +1,10 @@
 freeze==1.0.10
 six==1.12.0
+httplib2
+__future__
+googleapiclient.discovery
+httplib2
+oauth2client
+pprint
+flask
+random
