@@ -4,3 +4,8 @@ httplib2
 oauth2client
 pprint
 flask
+apiclient
+gflags
+uritemplate
+googleapiclient
+

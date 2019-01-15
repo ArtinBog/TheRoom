@@ -1,8 +1,8 @@
-*
+/*  *
 {
-    font-family: "Avenir Next", Verdana, sens-serif;
-
+    font-family: "Avenir Next", Verdana, sans-serif;
 }
+*/
 
 main {
     width: 80%;
@@ -30,7 +30,7 @@ aside {
 }
 
 #main_cta {
-    position: absolute;
+    position: absolute;pwd
     bottom: 10%;
     padding: 15px 35px;
     background: transparent;

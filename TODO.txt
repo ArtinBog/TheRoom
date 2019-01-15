@@ -1,0 +1,12 @@
+2. Make sure question don't repeat to often - DONE
+5. Put each question on its on URL - DONE
+9. Change font of each new question - DONE
+10. Migrate all data to PostgreSQL
+
+1. Make HTTP 2.0 instead of HTTP 1 - TO DO
+3. Put on the server, hosting - TO DO
+4. Transfer TheRoom.life - TO DO
+6. Have all questions capitalized - DONE
+7. Make it mobile friendly - TO DO
+8. 100% height screen styling - TO DO
+

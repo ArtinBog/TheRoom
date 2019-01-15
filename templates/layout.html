@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Avenir+Next|Roboto|Mina|Open+Sans|Lato|Noto+Sans|Montserrat|Oswald|Roboto+Condensed" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../static/script.js"></script>
+
+    <!--{% if color in ["red", "black", "darkred"] %}-->
+    <!--<script>-->
+        <!--$(function(white_color) {-->
+          <!--$("body").css({-->
+                    <!--"background-color": "{{ color }}",-->
+                    <!--"color": '{{ white_color }}'-->
+                    <!--});-->
+        <!--$("button").css({-->
+                    <!--"color": '{{ white_color }}',-->
+                    <!--"border-color": '{{ white_color }}'-->
+                    <!--});-->
+
+        <!--console.log("{{ white_color }}");-->
+        <!--});-->
+    <!--</script>-->
+    <!--<style>-->
+        <!--h1 {-->
+          <!--color: "{{ white_color }}"-->
+        <!--}-->
+
+    <!--</style>-->
+
+    <!--{% endif %}-->
+
+    <!--{% if color != 'red' or color!= 'blue' %}-->
+
+    <script>
+        $(function() {
+          color = "{{ color }}"
+          console.log("{{ color }}");
+
+          <!--$("*").css({ "font-family": "{{ font_family_choice }}" })-->
+          $("body").css({
+                    "background-color": "{{ color }}",
+                    "color": "{{ font_color }}",
+                    <!--"font-family": "{{ font_family_choice }}"-->
+                    });
+
+          $("html").css({
+                    "color": "{{ font_color }}",
+                    <!--"font-family": "{{ font_family_choice }}"-->
+                    });
+
+          $("h1").css({"color": "{{ font_color }}", "font-family": "{{ font_family_choice }}" });
+          $("#main_cta").css({
+                    "color": "{{ font_color }}",
+                    "border-color": "{{ font_color }}",
+                    <!--"font-family": "{{ font_family_choice }}"-->
+                    });
+          $(".additional_actions").css({
+                    "color": "{{ font_color }}",
+                    "border-color": "{{ font_color }}",
+                    <!--"font-family": "{{ font_family_choice }}"-->
+                    });
+        });
+    </script>
+    <!--{% endif %}-->
+
+
+    <title>The Room: {% block title %} {% endblock %} </title>
+
+</head>
+<body onload="typeWriter()">
+<main>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId=1000788316632083&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+<div id="top_section">
+
+<h1 id="type_question"></h1>
+<p id="question">{{ question }}</p>
+
+    <a href="{{ url_for('urls') }}"><button id="main_cta">Next Question</button></a>
+
+</main>
+
+<aside>
+    <ul>
+        <li><a href="https://amzn.to/2L7uI7H" title="Buy The Room cards on Amazon" target="_blank"><button class="additional_actions" id="buy_cards">Buy cards</button></a></li>
+        <li><a href="#fb_comment_section" title="See others answers"><button class="additional_actions" id="answers">Answers</button></a></li>
+    </ul>
+
+</aside>
+
+</div>
+
+<div id="fb_footer">
+
+    <div id="fb_comment_section">
+    <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-numposts="15" data-width='800'></div>
+    </div>
+
+
+    <footer>
+
+        <ul>
+
+            <li><a href="{{ url_for('about') }}">About The Room project</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </footer>
+</div>
+    <script>
+
+        var i = 0;
+        var txt = document.getElementById("question").innerHTML;
+        console.log(txt);
+
+        var speed = 50; /* The speed/duration of the effect in milliseconds */
+
+        function typeWriter() {
+          if (i < txt.length) {
+            document.getElementById("type_question").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+          }
+        }
+    </script>
+</body>
+</html>
