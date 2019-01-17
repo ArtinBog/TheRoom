@@ -254,10 +254,10 @@ def urls():
 def about():
     return render_template('about.html')
 
-db.create_all()
+# db.create_all()
 parameters()
 clean_dict_creation()
-migrate_data()
+# migrate_data()
 
 # print(historical_questions[-1])
 # print(clean_dict_creation())
